@@ -15,7 +15,7 @@ Input File Descriptions:
    - 'sample_id': A unique identifier for each sample.
    - 'disease_stage': The disease stage for each sample.
 
-2. SEA.txt: This file should be a tab-separated file containing V gene usage data for each sample. It must include the following columns:
+2. VDJ_genes.txt: This file should be a tab-separated file containing V gene usage data for each sample. It must include the following columns:
    - 'sample_id': A unique identifier for each sample (matching the metadata file).
    - 'V': The V gene used by each sequence in the sample.
 
