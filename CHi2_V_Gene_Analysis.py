@@ -37,7 +37,7 @@ metadata_df = pd.read_csv('metadata_Disease_ETC.csv')
 
 # Path to the V gene file to analyze
 # NOTE: This file contains sample IDs and V gene usage details, which will be analyzed to understand the distribution of V genes across different disease stages.
-v_gene_file = 'SEA.txt'
+v_gene_file = 'VDJ_genes.txt'
 
 # Initialize a dictionary to store the counts per disease stage
 # NOTE: Storing counts per disease stage is crucial for understanding how V gene usage varies with disease progression, which may help in identifying key immunological patterns.
@@ -88,13 +88,13 @@ results_df_v_gene = pd.DataFrame(data)
 
 # Export the results
 # NOTE: Saving this intermediate result is important for ease of future analysis or record-keeping.
-results_df_v_gene.to_csv('SEA_v_gene_counts_by_disease_stage.csv', index=False)
-print("V gene counts by disease stage have been exported to SEA_v_gene_counts_by_disease_stage.csv")
+results_df_v_gene.to_csv('v_gene_counts_by_disease_stage.csv', index=False)
+print("V gene counts by disease stage have been exported to v_gene_counts_by_disease_stage.csv")
 
 # Step 2: Grouped Bar Plot
 
 # Load the results from the CSV file
-results_df = pd.read_csv('SEA_v_gene_counts_by_disease_stage.csv')
+results_df = pd.read_csv('v_gene_counts_by_disease_stage.csv')
 
 # Create a grouped bar plot
 # NOTE: The grouped bar plot helps visualize the distribution of V gene usage across different disease stages, providing insights into how V gene expression varies with disease progression.
@@ -143,7 +143,7 @@ print("Significant Standardized Residuals (abs > 2):")
 print(significant_residuals)
 
 # Export standardized residuals to CSV for further analysis if needed
-residuals.to_csv('SEA_standardized_residuals.csv')
+residuals.to_csv('standardized_residuals.csv')
 
 # Visualize significant residuals using a heatmap
 # NOTE: The heatmap helps visualize the magnitude and direction of the residuals across different V genes and disease stages. It is particularly useful for identifying patterns where certain V genes are over- or under-represented in specific disease stages, which can provide valuable biological insights.
